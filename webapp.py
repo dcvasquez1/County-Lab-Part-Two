@@ -13,7 +13,7 @@ def render_main():
     
     if 'State' in request.args:
         sel_state = request.args["State"]
-        fact = fact_function()
+        fact = fact_function(sel_state)
         reply_state = sel_state
         return render_template('home.html', reply_list, fact, reply_state)
     
@@ -29,8 +29,12 @@ def get_state_options(counties):
             options += Markup("<option value=\"" + c["State"] + "\">" + c["State"] + "</option>")
     return options
 
-def fact_function():
-    return "*interesting fact"
+def fact_function(stateName):
+    statePopulation
+    for c in counties:
+        if c["State"] == stateName:
+            statePopulation = c["Population"]["2014 Population"]
+    return statePopulation
 
 if __name__=="__home__":
     app.run(debug=False, port=54321)

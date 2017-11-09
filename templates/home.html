@@ -14,8 +14,8 @@
 			<input type="submit">
 		</form>
         
-    {% if response_state != None %}
-		<p> {{ reply_state }} has a population of ___ </p>
+    {% if reply_state != None and fact != None %}
+		<p> {{ reply_state }} has a population of {{fact}}</p>
 	{% endif %}
 	
     </body>
