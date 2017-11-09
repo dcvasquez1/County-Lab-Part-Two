@@ -8,14 +8,14 @@
     <body>
         <form action=".">
 			<select name= "State">
-				{{reply_list}}
+				{{options}}
 			</select>
 			<br>
 			<input type="submit">
 		</form>
         
     {% if reply_state != None and fact != None %}
-		<p> {{ reply_state }} has a population of {{fact}}</p>
+		<p> {{ reply_state }} has a population of {{ fact }}</p>
 	{% endif %}
 	
     </body>
