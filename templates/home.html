@@ -2,22 +2,21 @@
     <html>
 
     <head>
-        <title>County Demographics Lab </title>
+        <title>County Dem. Lab Part 2</title>
     </head>
 
     <body>
-         <form action=".">
-        <select name= "State">
-            {{response_options}}
-        </select>
-        <br>
-        <input type="submit">
-    </form>
+        <form action=".">
+			<select name= "State">
+				{{response_options}}
+			</select>
+			<br>
+			<input type="submit">
+		</form>
         
-        <!--
-    {% if response_state and response_population is defined %}
-        <p> {{ response_state }} has a population of {{ response_population }} </p>
-      {% endif %}
--->
+    <!-- {% if response_state and response_population not nil %} -->
+			<p> {{ response_state }} has a population of ___ </p>
+	<!-- {% endif %}-->
+	
     </body>
 </html>

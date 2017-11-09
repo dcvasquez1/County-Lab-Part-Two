@@ -10,8 +10,8 @@ def render_main():
         counties = json.load(demographicsdata)
     if 'State' in request.args:
         sel_state = request.args["State"]
-        return render_template('home.html'""", response_options = get_state_options(counties), fact = func(), response_state = sel_state""")
-    return render_template('home.html'""", response_options = get_state_options(counties)""")
+        return render_template('home.html', response_options = get_state_options(counties), fact = fact_function(), response_state = sel_state)
+    return render_template('home.html', response_options = get_state_options(counties))
 
 
 def get_state_options(counties):
@@ -24,7 +24,7 @@ def get_state_options(counties):
     return options
 
 def fact_function():
-    
+    return "*interesting fact"
 
 if __name__=="__home__":
     app.run(debug=False, port=54321)
