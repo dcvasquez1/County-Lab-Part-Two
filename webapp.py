@@ -15,8 +15,7 @@ def render_main():
     if 'State' in request.args:
         return render_template('home.html', options = reply_list, fact = fact_function(sel_state), reply_state = request.args["State"]) 
     
-    return render_template('home.html')
-    """return render_template('home.html' , options = reply_list)"""
+    return render_template('home.html' , options = reply_list)
 
 
     
