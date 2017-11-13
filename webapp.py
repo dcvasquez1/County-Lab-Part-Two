@@ -13,7 +13,7 @@ def render_main():
     reply_list = get_state_options(counties)
     
     if 'State' in request.args:
-        return render_template('home.html', options = reply_list, fact = fact_function(sel_state), reply_state = request.args["State"]) 
+        return render_template('home.html', options = reply_list, fact = fact_function(request.args["State"]), reply_state = request.args["State"]) 
     
     return render_template('home.html' , options = reply_list)
 
