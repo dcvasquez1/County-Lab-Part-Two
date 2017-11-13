@@ -34,7 +34,7 @@ def fact_function(stateName):
     statePopulation = 0
     for c in counties:
         if c["State"] == stateName:
-            statePopulation = c["Population"]["2014 Population"]
+            statePopulation += c["Population"]["2014 Population"]
     return statePopulation
 
 
