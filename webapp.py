@@ -19,6 +19,7 @@ def render_main():
     """return render_template('home.html' , options = reply_list)"""
 
 
+    """
 def get_state_options(counties):
     states = []
     options = ""
@@ -27,7 +28,7 @@ def get_state_options(counties):
             states.append(c["State"])
             options += Markup("<option value=\"" + c["State"] + "\">" + c["State"] + "</option>")
     return options
-  
+  """
 """
 def fact_function(stateName):
     statePopulation
