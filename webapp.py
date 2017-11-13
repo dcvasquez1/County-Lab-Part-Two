@@ -6,19 +6,19 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 
 @app.route("/")
 def render_main():
-    """
+    
     with open('static/county_demographics.json') as demographicsdata
         counties = json.load(demographicsdata)
     
     reply_list = get_state_options(counties)
-    """
+    
     """if 'State' in request.args:
         return render_template('home.html', options = reply_list, fact = fact_function(sel_state), reply_state = request.args["State"]) 
     """
     return render_template('home.html')
     """return render_template('home.html' , options = reply_list)"""
 
-"""
+
 def get_state_options(counties):
     states = []
     options = ""
@@ -27,7 +27,7 @@ def get_state_options(counties):
             states.append(c["State"])
             options += Markup("<option value=\"" + c["State"] + "\">" + c["State"] + "</option>")
     return options
-"""   
+  
 """
 def fact_function(stateName):
     statePopulation
