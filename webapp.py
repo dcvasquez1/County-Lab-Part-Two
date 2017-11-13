@@ -9,17 +9,17 @@ def render_main():
     
     with open('static/county_demographics.json') as demographicsdata:
         counties = json.load(demographicsdata)
-    """
+    
     reply_list = get_state_options(counties)
-    """
-    """if 'State' in request.args:
+    
+    if 'State' in request.args:
         return render_template('home.html', options = reply_list, fact = fact_function(sel_state), reply_state = request.args["State"]) 
-    """
+    
     return render_template('home.html')
     """return render_template('home.html' , options = reply_list)"""
 
 
-    """
+    
 def get_state_options(counties):
     states = []
     options = ""
@@ -28,15 +28,14 @@ def get_state_options(counties):
             states.append(c["State"])
             options += Markup("<option value=\"" + c["State"] + "\">" + c["State"] + "</option>")
     return options
-  """
-"""
+  
 def fact_function(stateName):
     statePopulation
     for c in counties:
         if c["State"] == stateName:
             statePopulation = c["Population"]["2014 Population"]
     return statePopulation
-"""
+
 
 if __name__=="__home__":
     app.run(debug=False, port=54321)
