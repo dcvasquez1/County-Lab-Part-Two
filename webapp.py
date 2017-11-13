@@ -29,6 +29,8 @@ def get_state_options(counties):
     return options
   
 def fact_function(stateName):
+    with open('static/county_demographics.json') as demographicsdata:
+        counties = json.load(demographicsdata)
     statePopulation = 0
     for c in counties:
         if c["State"] == stateName:
