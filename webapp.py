@@ -29,7 +29,7 @@ def get_state_options(counties):
     return options
   
 def fact_function(stateName):
-    statePopulation
+    statePopulation = 0
     for c in counties:
         if c["State"] == stateName:
             statePopulation = c["Population"]["2014 Population"]
